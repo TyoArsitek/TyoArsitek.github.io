@@ -1,0 +1,630 @@
+:root {
+  --gold: #dfb017;
+  --bg: #ab936b;
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5)
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+  min-height: 2000px;
+  scroll-behavior: smooth;
+}
+
+.hero :before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(gambar/KB6C7684.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: grayscale();
+  animation: animate 11s infinite alternate;
+}
+@keyframes animate {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+}
+
+.hero h1, .hero h3, .hero h4, .hero p {
+  text-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-family: "Lobster";
+  font-size: 9rem;
+  font-weight: lighter;
+}
+
+.flicker {
+  font-size: 9rem;
+  font-family: "Lobster";
+  margin: 1rem auto;
+  color: #ffd90061;
+  background: -webkit-gradient(linear, left top, right top, from(#fafaf8), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
+  background-size: 110px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: flick 3s infinite alternate;
+}
+@keyframes flick {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+
+.hero h3 {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.hero h4 {
+  font-size: 1.6rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.hero span {
+  font-size: 1.6rem;
+  color:  white;
+  text-shadow: var(--shadow);
+}
+
+.hero p {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.hero a {
+  color: goldenrod;
+  background-color: white;
+  box-shadow: var(--shadow);
+}
+
+.hero a:hover {
+  background-color: var(--bg);
+  color: white;
+}
+
+.mynavbar {
+  background-color: rgb(255, 255, 255, 0,3) !important;
+  backdrop-filter: blur(4px);
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: 'Sacramento';
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.home {
+  background-image: url(gambar/a.png);
+  background-color: rgb(255, 228, 228);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 8rem;
+  padding-bottom: 11rem;
+}
+
+.home h2 {
+  color: goldenrod;
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: var(--shadow);
+  border-bottom: 8px;
+  width: 100%;
+}
+
+.gallery  h2,
+.rsvp h2,
+.gifts h2 {
+  color: goldenrod;
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
+.home h3 {
+  color: #444;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.home p,
+.gallery p,
+.rsvp p,
+.gifts h3,
+.gifts p {
+  font-size: 1.2rem;
+  color: #252525;
+  font-weight: 300;
+}
+
+.home .couple {
+  margin-top: 100px;
+}
+
+.home .couple h3 {
+  font-family: 'Lobster';
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: var(--shadow);
+  letter-spacing: 0.1rem;
+}
+
+.home  .couple img {
+  width:  100%;
+}
+
+
+.home .hati {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(65px);
+}
+
+.home .hati i {
+  margin: auto;
+  color: rgb(253, 103, 128);
+}
+
+.info {
+  background-image: url(gambar/b.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 8rem;
+  padding-bottom: 20rem;
+}
+
+.info .alamat {
+  font-size: 1.4rem;
+}
+
+
+.info .card {
+  background-color: rgba(209, 208, 208, 0.6) !important;
+  color: rgb(8, 8, 8) !important;
+  border: 1px solid #999;
+}
+
+.info .card-header {
+  font-family: 'Lobster';
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 2rem;
+  border-bottom: 1px solid #999;
+  letter-spacing: 0.2rem;
+}
+
+.info .card-body {
+ font-size: 1rem;
+}
+
+.info .card-footer {
+  border-top: 1px solid #999;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.info span {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+}
+
+
+.gallery {
+  background-image: url(gambar/d.png);
+  background-color: rgba(255, 228, 228, 0.6);
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 8rem;
+  padding-bottom: 11rem;
+}
+
+.gallery span,
+.gifts span {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.rsvp {
+  background-image: url(gambar/d.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 11rem;
+  min-height: 100vh;
+  
+}
+
+.rsvp h2,
+.info h2 {
+  color: rgb(252, 184, 195);
+  font-family: "Sacramento";
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: var(--shadow);
+}
+
+.rsvp form label {
+  color: black;
+}
+
+.rsvp button, .gifts button {
+  background-color: rgb(253, 134, 154);
+  color: white;
+  border: 1px solid rgb(253, 134, 154);
+}
+.rsvp button:hover, .gifts button:hover {
+  background-color: white;
+  color: rgb(253, 134, 154);
+  border: 1px solid white;
+}
+.rsvp .card {
+  background-color: rgba(209, 208, 208, 0.6) !important;
+}
+
+footer {
+  padding: 3rem;
+  background-color: burlywood;
+  color: white;
+}
+
+.gifts {
+  background-image: url(gambar/c.png);
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 8rem;
+  min-height: 100vh;
+}
+
+.gifts p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.gifts .card {
+  background-color: #fffdfd80 !important;
+  color: rgb(255, 255, 255) !important;
+  border: 1px solid var(--bg);
+}
+
+.gifts .card-header {
+  border-bottom: 1px solid var(--bg);
+}
+
+.gifts .bi-copy {
+  font-size: 1.5rem;
+}
+
+.gifts img  {
+  width: 14rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  
+}
+
+.gifts h3 {
+  font-size: 1.5rem;
+}
+
+footer a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer li {
+  list-style: none;
+  display: inline;
+  margin: 0.5rem;
+}
+
+.audio-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  cursor: pointer;
+  color: green;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: muter 4s linear infinite;
+  line-height: 0;
+}
+
+@keyframes muter {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* gambar box */
+.gallery .container {
+  display: contents;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+.box {
+  flex: 4;
+  overflow: hidden;
+  transition: .5s;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box img {
+  width: 200%;
+  height: calc(100% - 1vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img {
+  width: 100%;
+  height: 100%;
+}
+
+/*------------------------------------------------------------------
+    LOADER 
+-------------------------------------------------------------------*/
+
+#preloader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #dd666c;
+  z-index: 11000;
+  position: fixed;
+  display: block;
+}
+
+.pulse {
+height: 150px;
+width: 200px;
+overflow: hidden;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+
+.pulse:after {
+content: '';
+display: block;
+background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200px 100px" enable-background="new 0 0 200px 100px" xml:space="preserve"><polyline fill="none" stroke-width="3px" stroke="white" points="2.4,58.7 70.8,58.7 76.1,46.2 81.1,58.7 89.9,58.7 93.8,66.5 102.8,22.7 110.6,78.7 115.3,58.7 126.4,58.7 134.4,54.7 142.4,58.7 197.8,58.7 "/></svg>') 0 0 no-repeat;
+width: 100%;
+height: 100%;
+position: absolute;
+-webkit-animation: 2s pulse linear alternate;
+animation: 2s pulse linear alternate;
+  clip: rect(0, 0, 100px, 0);
+}
+
+.pulse:before {
+content: '';
+position: absolute;
+z-index: -1;
+left: 2px;
+right: 2px;
+bottom: 0;
+top: 16px;
+margin: auto;
+height: 3px;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    clip: rect(0, 0, 100px, 0);
+    opacity: 0.4;
+  }
+  4% {
+    clip: rect(0, 66.66667px, 100px, 0);
+    opacity: 0.6;
+  }
+  15% {
+    clip: rect(0, 133.33333px, 100px, 0);
+    opacity: 0.8;
+  }
+  20% {
+    clip: rect(0, 300px, 100px, 0);
+      opacity: 1;
+  }
+
+  80% {
+    clip: rect(0, 300px, 100px, 0);
+      opacity:0;
+  }
+
+  90% {
+    clip: rect(0, 300px, 100px, 0);
+    opacity: 0;
+  }
+
+  100% {
+    clip: rect(0, 300px, 100px, 0);
+    opacity:0;
+  }
+}
+@keyframes pulse {
+  0% {
+    clip: rect(0, 0, 100px, 0);
+  }
+  4% {
+    clip: rect(0, 66.66667px, 100px, 0);
+  }
+  15% {
+    clip: rect(0, 133.33333px, 100px, 0);
+  }
+  20% {
+    clip: rect(0, 300px, 100px, 0);
+      opacity:1;
+  }
+
+  80% {
+    clip: rect(0, 300px, 100px, 0);
+      opacity:0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    clip: rect(0, 300px, 100px, 0);
+    opacity:0;
+  }
+}
+
+.pulse {
+  text-align : center;
+  font-family: "Lobster";
+}
+.pulse .text{
+  color: #ffffff;
+  font-size: 50px;
+}
+.pulse i{
+color: #ffffff;
+font-size: 50px;
+}
+
+
+
+
+/* Media Query */
+/* Extra Large */
+@media (max-width: 1200px) {
+  .home .hati {
+    transform: translateX(-50%) translateY(45px);
+  }
+  .sticky-top {
+    overflow: hidden;
+  }
+}
+
+
+/* leptop */
+@media (max-width: 992px) {
+  html {
+    font-size: 80%;
+
+  }
+  .simply-countdown-dark > .simply-section {
+    padding: 40px;
+  }
+
+  .home .hati {
+    display: none;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+}
+
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 75%
+  }
+  .simply-countdown-dark > .simply-section {
+    padding: 45px;
+    margin: 4px;
+  }
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .sticky-top {
+    overflow: hidden;
+  }
+
+}
+
+/* mobile phone */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+  .mynavbar .nav-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  .simply-countdown-dark > .simply-section {
+    padding: 30px;
+    margin: px;
+  }
+}
+
